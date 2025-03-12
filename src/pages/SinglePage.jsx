@@ -51,8 +51,6 @@ const SinglePage = () => {
     if (error) {
       return <p>Error: {error}</p>;
     }
-  console.log(projectData);
-  console.log(toolsData);
 
   const getToolImage = (toolTitle) => {
     const tool = toolsData.find(tool => tool.title.rendered === toolTitle)
