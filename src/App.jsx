@@ -17,9 +17,10 @@ function App() {
   return (
     <ThemeProvider>
     <Router>
+      <header>
       <Logo />
-      <ThemeToggle />
       <Navigation />
+      </header>
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -30,6 +31,7 @@ function App() {
           <Route path='*' element={<ErrorPage />} />
         </Routes>
       </AnimatePresence>  
+      <ThemeToggle />
     </Router>
     </ThemeProvider>
   )

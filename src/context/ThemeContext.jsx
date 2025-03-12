@@ -21,5 +21,5 @@ const ThemeProvider = ({ children }) => {
 };
 
 const useTheme = () => useContext(ThemeContext);
-
+// eslint-disable-next-line
 export { ThemeProvider, useTheme };
