@@ -42,25 +42,4 @@
 }
 
 
-.loader {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: -32px;
-  border-radius: 50%;
-  color: #fff;
-  background: currentColor;
-  box-shadow: 32px 0 , -32px 0 ,  64px 0;
-}
 
-.loader::after {
-  content: '';
-  position: absolute;
-  left: -32px;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 10px;
-  background:#FF3D00;
-  animation: move 3s linear infinite alternate;
-}
