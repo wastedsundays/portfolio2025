@@ -2,7 +2,7 @@
 
 2025 Portfolio Website for Adam H
 
-## Features
+## About
 
 
 

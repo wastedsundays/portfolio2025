@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { ThemeProvider } from './context/ThemeContext';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import WorkPage from './pages/WorkPage';
@@ -9,12 +10,15 @@ import ContactPage from './pages/ContactPage';
 import ErrorPage from './pages/ErrorPage';
 import Navigation from './components/Navigation';
 import Logo from './components/Logo';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
 
   return (
+    <ThemeProvider>
     <Router>
       <Logo />
+      <ThemeToggle />
       <Navigation />
       <AnimatePresence>
         <Routes>
@@ -27,6 +31,7 @@ function App() {
         </Routes>
       </AnimatePresence>  
     </Router>
+    </ThemeProvider>
   )
 }
 
