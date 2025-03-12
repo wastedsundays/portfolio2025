@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 // eslint-disable-next-line
 import { motion } from 'framer-motion';
 import { REST_PATH } from '../globals/globals';
+import ErrorPage from './ErrorPage';
 
 
 
@@ -64,6 +65,7 @@ const SinglePage = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
+        {projectData.length > 0 ? (
         <div>
           <h1>{projectData[0].title.rendered}</h1>
   
@@ -85,11 +87,13 @@ const SinglePage = () => {
                     GitHub
                     </a>)
             }
-            <h2>Tools</h2>
+
             {/* Render tools data here */}
             {projectData[0].acf.work_tools && projectData[0].acf.work_tools.length > 0 && (
+              <>
                         <div className='project-tools'>
-                            <h3 style={{color: projectData[0].acf.project_primary_color}}>Toolbox</h3>
+                        <h2 style={{color: projectData[0].acf.project_primary_color}}>Toolbox</h2>
+                            
                             {projectData[0].acf.work_tools.map((tool, i) => (
                                 <div key={i}>
                                     <div className={tool.post_title}>                                     
@@ -98,10 +102,14 @@ const SinglePage = () => {
                                 </div>
                             ))}
                         </div>
+              </>
                     )}
 
           </div>
         </div>
+        ) : (
+          <ErrorPage />
+        )}
       </motion.div>
     );
   };
