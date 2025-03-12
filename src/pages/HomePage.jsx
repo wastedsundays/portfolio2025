@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const HomePage = () => {
     return (
-        <motion.div
+        <motion.div className='home-page'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

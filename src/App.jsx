@@ -8,11 +8,13 @@ import SinglePage from './pages/SinglePage';
 import ContactPage from './pages/ContactPage';
 import ErrorPage from './pages/ErrorPage';
 import Navigation from './components/Navigation';
+import Logo from './components/Logo';
 
 function App() {
 
   return (
     <Router>
+      <Logo />
       <Navigation />
       <AnimatePresence>
         <Routes>

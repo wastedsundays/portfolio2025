@@ -7,7 +7,10 @@
 
 
 ## Tech Stack
-
+- **Frontend**: React, Framer Motion, React Router
+- **Build tool**: Vite
+- **Package Manager**: pnpm
+- **Styling**: SASS
 
 ## Getting Started
 
@@ -46,7 +49,7 @@ Make sure you have the following installed:
       /styles       # Global styles
       /utils        # Utility functions (optional)
       /App.jsx      # Main application entry point
-      /index.jsx    # Main entry point for Vite
+      /main.jsx    # Main entry point for Vite
 
 ### Screenshots
 
