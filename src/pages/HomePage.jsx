@@ -41,14 +41,26 @@ const HomePage = () => {
 
             <h1>Home Page</h1>
             <p>This is the Home page. Static content set by react. The next section is from API</p>
-            <div className='api-content'>
+            
+            <section className='featured-work'>
+                <h2>Featured Work</h2>
+                <p>Here are some of the projects I have worked on recently</p>
+            </section>
+
+            <section className='api-content'>
+                <h2>Content from WP</h2>
                 { homeLoaded ? (
                     <div dangerouslySetInnerHTML={{ __html: homeData.content.rendered }}></div>
                 ) : (
                     <Loading />
                 )}
 
-            </div>  
+            </section>  
+
+            <section className='contact'>
+                <h2>Contact</h2>
+                <p>Get in touch with me</p>
+            </section>
 
         </motion.div>
     );
