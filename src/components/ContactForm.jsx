@@ -14,7 +14,6 @@ const ContactForm = () => {
 
     const sendEmail = async (event) => {
         event.preventDefault();
-        console.log('Sending email');
         setEmailSent(true);
     }
 
@@ -23,7 +22,6 @@ const ContactForm = () => {
             ...formData,
             [event.target.name]: event.target.value
         });
-        console.log(event.target.name+" changed");
     }
 
     return (
