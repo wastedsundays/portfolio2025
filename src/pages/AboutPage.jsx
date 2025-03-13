@@ -1,8 +1,33 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 // eslint-disable-next-line
 import { motion } from 'framer-motion';
+import { REST_PATH } from '../globals/globals';
+import Loading from '../components/Loading';
+
 
 const AboutPage = () => {
+
+    const aboutRestPath = `${ REST_PATH }pages/104`;
+
+    const [aboutRestData, setAboutRestData] = useState([]);
+    const [aboutLoaded, setAboutLoaded] = useState(false);
+
+    useEffect(() => {
+        const fetchAboutData = async () => {
+            const response = await fetch(aboutRestPath);
+            if (!response.ok) {
+                setAboutLoaded(false);
+                throw new Error(`HTTP error! status: ${response.status}`);
+            } else {
+                const about = await response.json();
+                setAboutRestData(about);
+                setAboutLoaded(true);
+            }
+        }
+        fetchAboutData();
+    }
+    , [aboutRestPath]);
+
     return (
     <motion.div
         initial={{ opacity: 0 }}
@@ -12,8 +37,23 @@ const AboutPage = () => {
         >
             <div>
                 <h1>About Page</h1>
-                <p>This is the About me page</p>
+
+                {aboutLoaded ? (
+                    <div>
+                        <h2>{aboutRestData.title.rendered}</h2>
+                        <div dangerouslySetInnerHTML={{ __html: aboutRestData.content.rendered }} />
+                    
+                        <section>
+                            <p>Put the toolbox here</p>
+                        </section>
+                    </div>
+                ) : (
+                    <Loading />
+                )}
+
             </div>
+
+            
     </motion.div>
     );
     };
