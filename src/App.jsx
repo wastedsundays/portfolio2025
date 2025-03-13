@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './context/ThemeContext';
+import { EmailProvider } from './context/EmailContext';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import WorkPage from './pages/WorkPage';
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <ThemeProvider>
+    <EmailProvider>
     <Router>
       <header>
       <Logo />
@@ -33,6 +35,7 @@ function App() {
       </AnimatePresence>  
       <ThemeToggle />
     </Router>
+    </EmailProvider>
     </ThemeProvider>
   )
 }

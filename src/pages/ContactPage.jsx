@@ -1,6 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line
 import { motion } from 'framer-motion';
+import ContactForm from '../components/ContactForm';
 
 const ContactPage = () => {
     return (
@@ -14,6 +15,7 @@ const ContactPage = () => {
             <div>
                 <h1>Contact Page</h1>
                 <p>This page shows the contact form. All pages will show it at the bottom</p>
+                <ContactForm />
             </div>
         </motion.div>
     );
