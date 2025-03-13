@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Loading from '../components/Loading';
+import FeaturedWork from '../components/FeaturedWork';
 import { REST_PATH } from '../globals/globals';
 
 const HomePage = () => {
@@ -39,12 +40,12 @@ const HomePage = () => {
             transition={{ duration: 1.5 }}
             >
 
-            <h1>Home Page</h1>
-            <p>This is the Home page. Static content set by react. The next section is from API</p>
+            <h1>Adam H</h1>
+            <p>Front End Developer & Maker of things</p>
             
             <section className='featured-work'>
                 <h2>Featured Work</h2>
-                <p>Here are some of the projects I have worked on recently</p>
+                <FeaturedWork />
             </section>
 
             <section className='api-content'>
