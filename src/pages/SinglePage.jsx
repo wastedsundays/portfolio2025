@@ -59,7 +59,7 @@ const SinglePage = () => {
 }
 
     return (
-      <motion.div
+      <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -67,11 +67,23 @@ const SinglePage = () => {
       >
         {projectData.length > 0 ? (
         <div>
-          <h1>{projectData[0].title.rendered}</h1>
-  
-          <div>
-            <h2>Project Details</h2>
-            {/* Render project data here */}
+          <section className='hero-section'>
+            <h1>{projectData[0].title.rendered}</h1>
+            {projectData[0].featured_images['1536x1536'] && (
+                              <img 
+                              srcSet={projectData[0].featured_images['1536x1536'].srcset}   
+                              sizes="(max-width: 600px) 300px,
+                              (max-width: 1024px) 768px,
+                              (max-width: 1920px) 1024px,
+                              1920px"
+                              alt={projectData[0].featured_images['1536x1536'].alt}
+                              />
+                          )}
+          </section>
+
+          <section className='project-details'>
+            <h2>Details</h2>
+
             <div dangerouslySetInnerHTML={{__html:projectData[0].content.rendered}}></div>
 
             
@@ -87,8 +99,9 @@ const SinglePage = () => {
                     GitHub
                     </a>)
             }
+          </section>
 
-            {/* Render tools data here */}
+          <section className='project-tools'>
             {projectData[0].acf.work_tools && projectData[0].acf.work_tools.length > 0 && (
               <>
                         <div className='project-tools'>
@@ -105,12 +118,12 @@ const SinglePage = () => {
               </>
                     )}
 
-          </div>
+          </section>
         </div>
         ) : (
           <ErrorPage />
         )}
-      </motion.div>
+      </motion.main>
     );
   };
   
