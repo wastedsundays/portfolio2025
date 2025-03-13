@@ -44,12 +44,20 @@ const FeaturedWork = () => {
     return (
         <>
         {featuredWorkLoaded ? ( 
+            <>
             <div className='featured-project-display'>
                 {featuredItems.map((project, i) => (
                     <article className='featured-project-card' key={i}>
                         
-                        {project.featured_images['medium'] && (
-                            <img srcSet={project.featured_images['medium'].srcset} alt={project.featured_images['medium'].alt}/>
+                        {project.featured_images['medium_large'] && (
+                            <img 
+                            srcSet={project.featured_images['medium_large'].srcset}   
+                            sizes="(max-width: 600px) 300px,
+                            (max-width: 1024px) 768px,
+                            (max-width: 1920px) 1024px,
+                            1920px"
+                            alt={project.featured_images['medium_large'].alt}
+                            />
                         )}
 
                         <h3 className='featured-project-card-title'>{project.title.rendered}</h3>
@@ -58,7 +66,15 @@ const FeaturedWork = () => {
                         </Link>
                     </article>
                 ))}
+
             </div>
+            <div>
+                <Link to='/work'>
+                    <button>View All</button>
+                </Link>
+            </div>
+            </>
+
         ) : (
             <Loading />
         )}

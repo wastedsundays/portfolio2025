@@ -116,3 +116,13 @@ button:focus-visible {
 .featured-project-card img {
   width: 100%;
 }
+
+.project {
+  max-width: 26.25rem;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.project img {
+  width: 100%;
+}
