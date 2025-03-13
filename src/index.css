@@ -105,3 +105,14 @@ button:focus-visible {
 @keyframes l10{
   90%,100% {transform: translate(300%)}
 }
+
+
+.featured-project-card {
+  max-width: 26.25rem;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.featured-project-card img {
+  width: 100%;
+}

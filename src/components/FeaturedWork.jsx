@@ -44,14 +44,19 @@ const FeaturedWork = () => {
     return (
         <>
         {featuredWorkLoaded ? ( 
-            <div>
+            <div className='featured-project-display'>
                 {featuredItems.map((project, i) => (
-                    <div key={i}>
-                        {project.title.rendered}
+                    <article className='featured-project-card' key={i}>
+                        
+                        {project.featured_images['medium'] && (
+                            <img srcSet={project.featured_images['medium'].srcset} alt={project.featured_images['medium'].alt}/>
+                        )}
+
+                        <h3 className='featured-project-card-title'>{project.title.rendered}</h3>
                         <Link to={`/work/${project.slug}`}>
                             Details
                         </Link>
-                    </div>
+                    </article>
                 ))}
             </div>
         ) : (

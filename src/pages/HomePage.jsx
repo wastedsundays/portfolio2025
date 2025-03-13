@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Loading from '../components/Loading';
 import FeaturedWork from '../components/FeaturedWork';
+import ContactForm from '../components/ContactForm';
 import { REST_PATH } from '../globals/globals';
 
 const HomePage = () => {
@@ -33,15 +34,16 @@ const HomePage = () => {
 
 
     return (
-        <motion.div className='home-page'
+        <motion.main className='home-page'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
             >
-
-            <h1>Adam H</h1>
-            <p>Front End Developer & Maker of things</p>
+            <section className='hero-section'>
+                <h1>Adam H</h1>
+                <p>Front End Developer & Maker of things</p>
+            </section>
             
             <section className='featured-work'>
                 <h2>Featured Work</h2>
@@ -55,15 +57,14 @@ const HomePage = () => {
                 ) : (
                     <Loading />
                 )}
-
             </section>  
 
             <section className='contact'>
                 <h2>Contact</h2>
-                <p>Get in touch with me</p>
+                <ContactForm />
             </section>
 
-        </motion.div>
+        </motion.main>
     );
     };
 
