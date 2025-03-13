@@ -126,3 +126,8 @@ button:focus-visible {
 .project img {
   width: 100%;
 }
+
+.filter-item {
+  width: 65px;
+  height: 95px;
+}

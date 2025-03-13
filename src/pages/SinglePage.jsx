@@ -43,6 +43,7 @@ const SinglePage = () => {
       };
   
       fetchData();
+      // eslint-disable-next-line
     }, [slug]);
   
     if (loading) {

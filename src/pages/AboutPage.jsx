@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { REST_PATH } from '../globals/globals';
 import Loading from '../components/Loading';
 import Toolbox from '../components/Toolbox';
+import ContactForm from '../components/ContactForm';
 
 
 const AboutPage = () => {
@@ -46,6 +47,9 @@ const AboutPage = () => {
                     
                         <section>
                             <Toolbox />
+                        </section>
+                        <section>
+                            <ContactForm />
                         </section>
                     </div>
                 ) : (
