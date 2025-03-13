@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { REST_PATH } from '../globals/globals';
 import Loading from '../components/Loading';
+import Toolbox from '../components/Toolbox';
 
 
 const AboutPage = () => {
@@ -44,7 +45,7 @@ const AboutPage = () => {
                         <div dangerouslySetInnerHTML={{ __html: aboutRestData.content.rendered }} />
                     
                         <section>
-                            <p>Put the toolbox here</p>
+                            <Toolbox />
                         </section>
                     </div>
                 ) : (
