@@ -136,3 +136,32 @@ button:focus-visible {
 .filter-item:hover {
   filter: drop-shadow(0 0 1px rgba(0,0,0,.3));
 }
+
+svg.line {
+  display: block;
+  width: 2.5rem;
+  height: .625rem;
+}
+
+.active-menu-item a {
+  color: red;
+}
+
+nav.closed ul {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  nav.closed ul {
+    display: block;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}

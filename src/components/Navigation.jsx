@@ -54,7 +54,7 @@ const Navigation = () => {
         <>
         <div>
         <button className='hamburger-button' onClick={toggleMenu}>
-                        {menuStatus}
+                        {/* {menuStatus} */}
                         <svg className="line top-line" viewBox="0 0 30 3">
                             <rect width="30" height="3"></rect>
                         </svg>
@@ -69,10 +69,10 @@ const Navigation = () => {
         
         <nav className={`${menuStatus}`}>
             <ul>
-                <li className={activeTab === 0 ? 'active-tab' : 'tab'}><Link to="/" onClick={closeMenu}>Home</Link></li>
-                <li className={activeTab === 1 ? 'active-tab' : 'tab'}><Link to="/work" onClick={closeMenu}>Work</Link></li>
-                <li className={activeTab === 2 ? 'active-tab' : 'tab'}><Link to="/about" onClick={closeMenu}>About</Link></li>
-                <li className={activeTab === 3 ? 'active-tab' : 'tab'}><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+                <li className={activeTab === 0 ? 'active-menu-item' : 'menu-item'}><Link to="/" onClick={closeMenu}>Home</Link></li>
+                <li className={activeTab === 1 ? 'active-menu-item' : 'menu-item'}><Link to="/work" onClick={closeMenu}>Work</Link></li>
+                <li className={activeTab === 2 ? 'active-menu-item' : 'menu-item'}><Link to="/about" onClick={closeMenu}>About</Link></li>
+                <li className={activeTab === 3 ? 'active-menu-item' : 'menu-item'}><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
             </ul>
         </nav>
         </>
