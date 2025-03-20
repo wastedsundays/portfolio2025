@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom';
 // eslint-disable-next-line
 import { motion } from 'framer-motion';
 import { REST_PATH } from '../globals/globals';
+import OtherWork from '../components/OtherWork';
 import ErrorPage from './ErrorPage';
+import ContactForm from '../components/ContactForm';
 
 
 
@@ -120,6 +122,8 @@ const SinglePage = () => {
                     )}
 
           </section>
+          <OtherWork id={projectData[0].id} />
+          <ContactForm />
         </div>
         ) : (
           <ErrorPage />
