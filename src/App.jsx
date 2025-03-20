@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './context/ThemeContext';
@@ -16,12 +16,14 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
+
+
   return (
     <ThemeProvider>
     <EmailProvider>
 
     <Router>
-    <ScrollToTop />
+
       <header>
       <Logo />
       <Navigation />
@@ -37,6 +39,7 @@ function App() {
         </Routes>
       </AnimatePresence>  
       <ThemeToggle />
+      <ScrollToTop />
     </Router>
     </EmailProvider>
     </ThemeProvider>

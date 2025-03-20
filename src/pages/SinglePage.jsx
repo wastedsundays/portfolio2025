@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 // eslint-disable-next-line
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { REST_PATH } from '../globals/globals';
 import OtherWork from '../components/OtherWork';
 import ErrorPage from './ErrorPage';
@@ -62,7 +62,9 @@ const SinglePage = () => {
 }
 
     return (
+      <AnimatePresence exitBeforeEnter>
       <motion.main
+        key={slug}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -129,6 +131,7 @@ const SinglePage = () => {
           <ErrorPage />
         )}
       </motion.main>
+      </AnimatePresence>
     );
   };
   
