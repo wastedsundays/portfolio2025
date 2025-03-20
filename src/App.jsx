@@ -12,13 +12,16 @@ import ErrorPage from './pages/ErrorPage';
 import Navigation from './components/Navigation';
 import Logo from './components/Logo';
 import ThemeToggle from './components/ThemeToggle';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
   return (
     <ThemeProvider>
     <EmailProvider>
+
     <Router>
+    <ScrollToTop />
       <header>
       <Logo />
       <Navigation />
