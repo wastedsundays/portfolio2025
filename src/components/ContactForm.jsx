@@ -11,17 +11,39 @@ const ContactForm = () => {
 
     const { emailSent, setEmailSent } = useContext(EmailContext);
 
-
-    const sendEmail = async (event) => {
-        event.preventDefault();
-        setEmailSent(true);
-    }
-
     const handleChange = (event) => {
         setFormData({
             ...formData,
             [event.target.name]: event.target.value
         });
+    }
+
+    const sendEmail = async (event) => {
+        event.preventDefault();
+        // setEmailSent(true);
+        try {
+            const response = await fetch('http://localhost/mail-endpoint.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const responseText = await response.text();
+            console.log(responseText);
+            console.log('Response:', response.status)
+
+            if (response.ok) {
+                setEmailSent(true);
+            } else {
+                alert('There was an error sending your message. Please try again. Response Not Ok.');
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert('There was an error sending your message. Please try again.');
+        }
     }
 
     return (
