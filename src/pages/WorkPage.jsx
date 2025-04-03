@@ -51,14 +51,19 @@ const WorkPage = () => {
                 const projectClass = project["featured-work"][0] === 2 ? 'project featured-project' : 'project';
 
                 return (
-                <div className={projectClass} key={i}>
+                <motion.div 
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: true }}
+                    className={projectClass} key={i}>
                     <Link to={`/work/${project.slug}`} >
                     {project.featured_images['medium'] && (
                         <img srcSet={project.featured_images['medium'].srcset} />
                     )}
                     <h2>{project.title.rendered}</h2>
                     </Link>
-                </div>
+                </motion.div>
                 );
             })}
             </div>
