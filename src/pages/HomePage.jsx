@@ -34,37 +34,41 @@ const HomePage = () => {
 
 
     return (
-        <motion.main className='home-page'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5 }}
-            >
-            <section className='hero-section'>
-                <h1>Adam H</h1>
-                <p>Front End Developer & Maker of things</p>
-            </section>
-            
-            <section className='featured-work'>
-                <h2>Featured Work</h2>
-                <FeaturedWork />
-            </section>
+        <>
+            { homeLoaded ? (
+            <motion.main className='home-page'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.5 }}
+                >
+                <section className='hero-section'>
+                    <h1>Adam H</h1>
+                    <p>Front End Developer & Maker of things</p>
+                </section>
+                
+                <section className='featured-work'>
+                    <h2>Featured Work</h2>
+                    <FeaturedWork />
+                </section>
 
-            <section className='wp-api-content'>
-                <h2>Content from WP</h2>
-                { homeLoaded ? (
-                    <div className='wp-data' dangerouslySetInnerHTML={{ __html: homeData.content.rendered }}></div>
-                ) : (
-                    <Loading />
-                )}
-            </section>  
+                <section className='wp-api-content'>
+                    <h2>Content from WP</h2>
 
-            <section className='contact'>
-                <h2>Contact</h2>
-                <ContactForm />
-            </section>
+                        <div className='wp-data' dangerouslySetInnerHTML={{ __html: homeData.content.rendered }}></div>
 
-        </motion.main>
+                </section>  
+
+                <section className='contact'>
+                    <h2>Contact</h2>
+                    <ContactForm />
+                </section>
+
+            </motion.main>
+            ) : (
+                <Loading />
+            )}
+        </>
     );
     };
 
