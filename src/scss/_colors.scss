@@ -13,7 +13,8 @@ $theme-light: (
     'disabled-text': #BDBDBD,
     'background-color': #FAFBFD,
     'background-surface': #F5F9FC,
-    'border-color': #e8e8e8
+    'border-color': #e8e8e8,
+    'nav-background': rgba(245, 249, 252, 0.85)
 );
 
 $theme-dark: (
@@ -22,5 +23,6 @@ $theme-dark: (
     'disabled-text': #535353,
     'background-color': #121212,
     'background-surface': #1C1C1C,
-    'border-color': rgba(250, 251, 253, .2)
+    'border-color': rgba(250, 251, 253, .2),
+    'nav-background': rgba(28, 28, 28, 0.85)
 );

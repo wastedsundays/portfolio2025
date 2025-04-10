@@ -9,6 +9,12 @@ const Navigation = () => {
     const [menuStatus, setMenuStatus] = useState("closed");
     const toggleMenu = () => {
         setMenuStatus(menuStatus === "closed" ? "open" : "closed");
+
+        if (menuStatus === "open") {
+            document.body.style.overflow = "auto";
+        } else {
+            document.body.style.overflow = "hidden";
+        }
     };
 
     const closeMenu = () => {
@@ -52,7 +58,7 @@ const Navigation = () => {
 
     return (
         <>
-        <div>
+
         <button className='hamburger-button' onClick={toggleMenu}>
                         {/* {menuStatus} */}
                         <svg className="line top-line" viewBox="0 0 30 3">
@@ -65,7 +71,7 @@ const Navigation = () => {
                             <rect width="30" height="3"></rect>
                         </svg>
                     </button>
-        </div>        
+       
         
         <nav className={`${menuStatus}`}>
             <ul>
