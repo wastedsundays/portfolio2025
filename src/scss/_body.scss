@@ -28,6 +28,7 @@ header {
     background-color: var(--background-surface);
     @include mixins.depth-3;
     border: var(--border-color) solid 1px;
+    transition: background-color .75s ease, color .75s ease;
 
 }
 
