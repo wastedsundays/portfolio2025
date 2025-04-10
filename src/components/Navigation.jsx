@@ -19,6 +19,7 @@ const Navigation = () => {
 
     const closeMenu = () => {
         setMenuStatus("closed");
+        document.body.style.overflow = "auto";
     };
 
     const handleResize = () => {
