@@ -1,0 +1,18 @@
+nav.closed ul {
+    display: none;
+  }
+  
+  @media (min-width: 800px) {
+    nav.closed ul {
+      display: block;
+    }
+  
+    .hamburger-button {
+      display: none;
+    }
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }

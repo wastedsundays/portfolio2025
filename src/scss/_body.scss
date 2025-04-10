@@ -19,10 +19,11 @@ body {
     background-color: var(--background-color);
     color: var(--primary-text);
     transition: background-color .75s ease, color .75s ease;
+    margin: 0;
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 }
 
 #user_name, #user_email, #message {
