@@ -48,7 +48,7 @@ const HomePage = () => {
                 </section>
                 
                 <section className='featured-work'>
-                    <h2>Featured Work</h2>
+                    <h2>Work</h2>
                     <FeaturedWork />
                 </section>
 
