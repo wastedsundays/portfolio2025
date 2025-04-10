@@ -1,0 +1,26 @@
+$theme-universal: (
+    'primary-color': #0076B6,
+    'primary-light': #33A6D9,
+    'primary-dark': #005A88,
+    'secondary-color': #FF9800,
+    'secondary-light': #FFB74D,
+    'secondary-dark': #F57C00
+    );
+
+$theme-light: (
+    'primary-text': #222222,
+    'secondary-text': #666666,
+    'disabled-text': #BDBDBD,
+    'background-color': #FAFBFD,
+    'background-surface': #F5F9FC,
+    'border-color': #e8e8e8
+);
+
+$theme-dark: (
+    'primary-text': #e0e0e0ce,
+    'secondary-text': #BDBDBD,
+    'disabled-text': #535353,
+    'background-color': #121212,
+    'background-surface': #1C1C1C,
+    'border-color': rgba(250, 251, 253, .2)
+);
