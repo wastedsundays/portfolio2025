@@ -1,5 +1,6 @@
 @use "colors";
 @use "mixins";
+@use "variables" as v;
 
 :root {
     @include mixins.theme-vars(colors.$theme-universal);
@@ -28,7 +29,11 @@ header {
     background-color: var(--background-surface);
     @include mixins.depth-3;
     border: var(--border-color) solid 1px;
-    transition: background-color .75s ease, color .75s ease;
+    transition: background-color .75s ease, color .75s ease, border .75s ease;
 
+}
+
+h1 {
+    @include mixins.depth-0;
 }
 
