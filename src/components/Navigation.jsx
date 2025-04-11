@@ -25,6 +25,7 @@ const Navigation = () => {
     const handleResize = () => {
         if (window.innerWidth > 800) {
             setMenuStatus("closed");
+            document.body.style.overflow = "auto";
         }
     };
 
