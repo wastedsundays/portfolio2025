@@ -90,7 +90,7 @@ nav li a:hover {
 }
 
 .active-menu-item a {
-    color: var(--primary-dark);
+    color: var(--primary-light);
 }
 
 nav.closed {
@@ -125,17 +125,28 @@ nav.open {
 }
 
 .theme-toggle {
-    background-color: var(--nav-background);
+    background-color: transparent;
     border: none;
-    @media (min-width: 50rem) {
 
+    // @media (min-width: 50rem) {
 
-    background-color: var(--background-color);
+    // background-color: var(--background-color);
 
-    }
+    // }
 
     svg {
-        width: 2.2rem;
-        fill: var(--primary-text)
+        width: 3.2rem;
+        background-color: transparent;
+        fill: var(--primary-text);
+
+        @media (min-width: 50rem) {
+         width: 2.2rem;
+        
+        }
+    }
+
+    svg:hover {
+        fill: var(--primary-color);
+        cursor: pointer;
     }
 }
