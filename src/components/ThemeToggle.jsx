@@ -1,4 +1,7 @@
 import { useTheme } from '../context/ThemeContext';
+import IconMoonshine from '../assets/IconMoonshine';
+import IconSunshine from '../assets/IconSunshine';
+
 
 const ThemeToggle = () => {
     const { theme, setTheme } = useTheme();
@@ -12,7 +15,8 @@ const ThemeToggle = () => {
             onClick={handleToggle}
             className="theme-toggle"
         >
-            {theme === 'dark' ? '☀️' : '🌙'}
+            {theme === 'dark' ? <IconSunshine /> : <IconMoonshine />}
+
         </button>
     );
 }

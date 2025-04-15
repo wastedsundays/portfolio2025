@@ -21,7 +21,7 @@
 
     #svg-b {
         opacity: 0;
-        transform: translateY(-100%);
+        transform: scale(0);
         transition: all 0.5s ease-in-out;
     }
 
@@ -121,5 +121,21 @@ nav.open {
         display: flex;
         justify-content: flex-end;
 
+    }
+}
+
+.theme-toggle {
+    background-color: var(--nav-background);
+    border: none;
+    @media (min-width: 50rem) {
+
+
+    background-color: var(--background-color);
+
+    }
+
+    svg {
+        width: 2.2rem;
+        fill: var(--primary-text)
     }
 }

@@ -21,7 +21,6 @@ const ContactForm = () => {
 
     const sendEmail = async (event) => {
         event.preventDefault();
-        // setEmailSent(true);
         try {
             const response = await fetch('http://localhost/mail-endpoint.php', {
                 method: 'POST',
