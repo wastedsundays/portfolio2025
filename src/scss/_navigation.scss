@@ -114,7 +114,7 @@ nav.open {
     nav.closed, nav.open {
         transform: translateX(0);
         transition: transform 0.5s ease-in-out;
-        height: 60px;
+        height: 2.8125rem;
     }
 
     nav ul {
