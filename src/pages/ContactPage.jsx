@@ -12,11 +12,10 @@ const ContactPage = () => {
             transition={{ duration: 1.5 }}
             >
 
-            <div>
-                <h1>Contact Page</h1>
-                <p>This page shows the contact form. All pages will show it at the bottom</p>
+            <section className='contact'>
+
                 <ContactForm />
-            </div>
+            </section>
         </motion.div>
     );
     };

@@ -1,8 +1,9 @@
 import { useContext, useState } from 'react';
 import EmailContext from '../context/EmailContext';
+import { useLocation } from 'react-router-dom';
 
 const ContactForm = () => {
-
+    const contactLocation = useLocation();
     const [formData, setFormData] = useState({
         user_name: '',
         user_email: '',
@@ -49,15 +50,19 @@ const ContactForm = () => {
     return (
         <div className='contact-form'>
             {emailSent ? (
-                <p>Thanks for your message! I will be in touch shortly.</p>
+                <div className='contact-message contact-message-sent'>
+                    <p>Thanks for your message! I will be in touch shortly.</p>
+                </div>
             ) : (
                 <>
                 <div>
-                    {/* {contactLocation.pathname === '/contact' ? (
-                        <h1 className='fs-hv2'>Contact</h1>
+                    {contactLocation.pathname === '/contact' ? (
+                        <h1 className='contact-heading fs-hv2'>Contact</h1>
                         ) : (
-                        <h2 className='fs-h2'>Contact</h2>
-                    )} */}
+                        <h2 className='contact-heading fs-h2'>Contact</h2>
+                    )}
+                </div>
+                <div className='contact-message'>
                     <p>I&apos;d love to hear from you! Whether you have a question about what I do (or about your current website), a collaboration opportunity,  or you just want to say hi, feel free to reach out.</p>
                 </div>
                 <form className='depth-4' onSubmit={sendEmail}>
@@ -73,9 +78,9 @@ const ContactForm = () => {
                         <label htmlFor="message">Message</label>
                         <textarea id="message" name="message" aria-required="true" required onChange={handleChange}></textarea>
                     </div>
-                    <div>
-                        <input type="submit" value="Send" />
-                    </div>
+
+                    <button type="submit" value="Send">Send</button>
+
                 </form>
                 </>
             )}
