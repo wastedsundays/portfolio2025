@@ -3,20 +3,65 @@
     top: 10px;
     right: 10px;
     z-index: 1000;
+    width:3.75rem  ;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+
+    svg {
+        width:90%;
+        fill: var(--primary-text)
+    }
+}
+
+.hamburger-button.open {
+    #svg-a {
+        transform: rotate(45deg) translate(10px, 10px);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #svg-b {
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    #svg-c {
+        transform: rotate(-45deg) translate(10px, -10px);
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+.hamburger-button.closed {
+    #svg-a {
+        // transform: rotate(45deg) translate(10px, 10px);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #svg-b {
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #svg-c {
+        // transform: rotate(-45deg) translate(10px, -10px);
+        transition: transform 0.5s ease-in-out;
+    }
 }
 
 nav {
     width: 100%;
-    background: var(--nav-background);
-    // background: rgba(255,255,255,.8);
+    background-color: var(--nav-background);
     backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 0;
     height: 100svh;
     z-index: 999;
 
     @media (min-width: 800px) {
-        background: var(--background-color);
+        background-color: var(--background-color);
+        display: block;
     }
 }
 
@@ -50,7 +95,7 @@ nav li a:hover {
 
 nav.closed {
     transform: translateX(100%);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out
     
 }
 
