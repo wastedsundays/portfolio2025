@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const Navigation = () => {
 
@@ -81,6 +82,7 @@ const Navigation = () => {
                 <li className={activeTab === 1 ? 'active-menu-item' : 'menu-item'}><Link to="/work" onClick={closeMenu}>Work</Link></li>
                 <li className={activeTab === 2 ? 'active-menu-item' : 'menu-item'}><Link to="/about" onClick={closeMenu}>About</Link></li>
                 <li className={activeTab === 3 ? 'active-menu-item' : 'menu-item'}><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+                <ThemeToggle />
             </ul>
         </nav>
         </>

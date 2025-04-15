@@ -38,7 +38,7 @@ function App() {
           <Route path='*' element={<ErrorPage />} />
         </Routes>
       </AnimatePresence>  
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       <ScrollToTop />
     </Router>
     </EmailProvider>
