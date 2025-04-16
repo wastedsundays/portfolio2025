@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { REST_PATH } from '../globals/globals';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer';
 
 const WorkPage = () => {
     const workRestPath = `${REST_PATH}ahdesigns-work?acf_format=standard`;
@@ -71,6 +72,7 @@ const WorkPage = () => {
             <Loading />
         }
         </section>
+        <Footer />
         </motion.div>
     );
     };
