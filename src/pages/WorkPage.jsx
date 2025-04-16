@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { REST_PATH } from '../globals/globals';
 import Loading from '../components/Loading';
 import Footer from '../components/Footer';
+import ContactForm from '../components/ContactForm';
 
 const WorkPage = () => {
     const workRestPath = `${REST_PATH}ahdesigns-work?acf_format=standard`;
@@ -71,6 +72,9 @@ const WorkPage = () => {
         :  
             <Loading />
         }
+        </section>
+        <section className='contact'>
+                    <ContactForm />
         </section>
 
         </motion.main>
