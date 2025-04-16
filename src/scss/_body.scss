@@ -2,9 +2,14 @@
 @use "mixins";
 @use "variables" as v;
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     @include mixins.theme-vars(colors.$theme-universal);
-    box-sizing: border-box;
 }
 
 .light {
@@ -42,6 +47,10 @@ header {
     width: 100%;
 }
 
+main {
+    min-height: 100svh;
+}
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -53,3 +62,10 @@ body::-webkit-scrollbar {
 //     -ms-overflow-style: none;  /* IE and Edge */
 //     scrollbar-width: none;  /* Firefox */
 //   }
+
+
+// temporary fix;
+
+.featured-work img {
+    width: 100%;
+}

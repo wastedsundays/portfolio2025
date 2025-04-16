@@ -47,7 +47,7 @@ const ContactForm = () => {
     }
 
     return (
-        <div className='contact-form'>
+        <div className='contact-container'>
             {emailSent ? (
                 <div className='contact-message contact-message-sent'>
                     <p>Thanks for your message! I will be in touch shortly.</p>
@@ -56,14 +56,14 @@ const ContactForm = () => {
                 <>
                 <div className='contact-text-container'>
                     {contactLocation.pathname === '/contact' ? (
-                        <h1 className='contact-heading fs-hv2'>Contact</h1>
+                        <h1 className='contact-heading fs-hv2'>Hello!</h1>
                         ) : (
-                        <h2 className='contact-heading fs-h2'>Contact</h2>
+                        <h2 className='contact-heading fs-h2'>Hello!</h2>
                     )}
 
                     <p>I&apos;d love to hear from you! Whether you have a question about what I do (or about your current website), a collaboration opportunity,  or you just want to say hi, feel free to reach out.</p>
                 </div>
-                <form className='depth-4' onSubmit={sendEmail}>
+                <form className='contact-form' onSubmit={sendEmail}>
                     <div>
                         <label htmlFor="user_name">Name</label>
                         <input type="text" id="user_name" name="user_name" aria-required="true" required onChange={handleChange}/>
