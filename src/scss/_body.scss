@@ -36,12 +36,7 @@ header {
     background-color: var(--background-color);
 }
 
-#user_name, #user_email, #message {
-    background-color: var(--background-surface);
-    @include mixins.depth-3;
-    transition: background-color .75s ease, color .75s ease, border .75s ease;
 
-}
 
 .wp-data img {
     width: 100%;

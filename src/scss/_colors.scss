@@ -15,7 +15,8 @@ $theme-light: (
     'background-color': #FAFBFD,
     'background-surface': #F5F9FC,
     'border-color': #e8e8e8,
-    'nav-background': rgba(245, 249, 252, 0.85)
+    'nav-background': rgba(245, 249, 252, 0.85),
+    'input-background': #F5F9FC
 );
 
 $theme-dark: (
@@ -25,5 +26,6 @@ $theme-dark: (
     'background-color': #121212,
     'background-surface': #1C1C1C,
     'border-color': rgba(250, 251, 253, .2),
-    'nav-background': rgba(28, 28, 28, 0.85)
+    'nav-background': rgba(28, 28, 28, 0.85),
+    'input-background': rgba(200, 200, 200, .15)
 );
