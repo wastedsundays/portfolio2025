@@ -54,14 +54,13 @@ const ContactForm = () => {
                 </div>
             ) : (
                 <>
-                <div>
+                <div className='contact-text-container'>
                     {contactLocation.pathname === '/contact' ? (
                         <h1 className='contact-heading fs-hv2'>Contact</h1>
                         ) : (
                         <h2 className='contact-heading fs-h2'>Contact</h2>
                     )}
-                </div>
-                <div className='contact-message'>
+
                     <p>I&apos;d love to hear from you! Whether you have a question about what I do (or about your current website), a collaboration opportunity,  or you just want to say hi, feel free to reach out.</p>
                 </div>
                 <form className='depth-4' onSubmit={sendEmail}>
