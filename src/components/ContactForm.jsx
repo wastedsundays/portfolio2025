@@ -1,6 +1,8 @@
 import { useContext, useState } from 'react';
 import EmailContext from '../context/EmailContext';
 import { useLocation } from 'react-router-dom';
+import IconLinkedin from '../assets/IconLinkedin';
+import IconGit from '../assets/IconGit';
 
 const ContactForm = () => {
     const contactLocation = useLocation();
@@ -49,8 +51,23 @@ const ContactForm = () => {
     return (
         <div className='contact-container'>
             {emailSent ? (
-                <div className='contact-message contact-message-sent'>
-                    <p>Thanks for your message! I will be in touch shortly.</p>
+                <div className='contact-text-container'>
+                    {contactLocation.pathname === '/contact' ? (
+                        <h1 className='contact-heading fs-hv2'>Thanks!</h1>
+                        ) : (
+                        <h2 className='contact-heading fs-h2'>Thanks!</h2>
+                    )}
+                    <p>Your message is on the way. I will be in touch shortly.</p>
+                    <p>Here's some other ways to track me down:</p>
+                    <div className='contact-socials'>
+                        <a href="https://www.linkedin.com/in/adamhauck1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className='contact-icon'>
+                        <IconLinkedin />
+                        </a>
+                        <a href="https://github.com/wastedsundays" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className='contact-icon'>
+                        <IconGit />
+                        </a>
+                    </div>
+
                 </div>
             ) : (
                 <>
