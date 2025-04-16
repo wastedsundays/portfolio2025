@@ -10,6 +10,7 @@ footer {
     @media (min-width: 40rem) {
         flex-direction: row;
         justify-content: space-between;
+        min-height: 4.5rem;
     }
 
 }
@@ -22,7 +23,7 @@ footer {
     @media (min-width: 40rem) {
         margin-bottom: 0;
     }
-    
+
     svg {
         width: 3rem;
         fill: var(--button-text);
