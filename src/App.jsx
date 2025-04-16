@@ -13,7 +13,6 @@ import Navigation from './components/Navigation';
 import Logo from './components/Logo';
 import ThemeToggle from './components/ThemeToggle';
 import ScrollToTop from './components/ScrollToTop';
-import Footer from './components/Footer';
 
 function App() {
 
@@ -40,7 +39,7 @@ function App() {
         </Routes>
       </AnimatePresence>  
       {/* <ThemeToggle /> */}
-      <Footer />
+
       <ScrollToTop />
     </Router>
     </EmailProvider>

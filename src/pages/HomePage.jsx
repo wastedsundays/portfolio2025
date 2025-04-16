@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import FeaturedWork from '../components/FeaturedWork';
 import ContactForm from '../components/ContactForm';
 import { REST_PATH } from '../globals/globals';
+import Footer from '../components/Footer';
 
 const HomePage = () => {
 
@@ -67,6 +68,7 @@ const HomePage = () => {
             ) : (
                 <Loading />
             )}
+            <Footer />
         </>
     );
     };
