@@ -35,12 +35,6 @@
     margin-block-end: min(3rem, 10vh);
 }
 
-.contact-form {
-    // border: 1px solid var(--border-color);
-    // padding: 2rem;
-
-}
-
 input, textarea{
     width: 100%;
     padding: 10px;
@@ -50,6 +44,11 @@ input, textarea{
     @include mixins.depth-3;
     transition: background-color .75s ease, color .75s ease, border .75s ease;
     color: var(--primary-text);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 12.5rem;
 }
 
 input:focus, textarea:focus {
@@ -79,3 +78,22 @@ button[type="submit"]:active {
     background-color: var(--primary-light);
     cursor: pointer;
 }
+
+.contact-socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    svg {
+        fill: var(--primary-text);
+        width: 4rem;
+        @include mixins.depth-6;
+    }
+
+    svg:hover {
+        fill: var(--primary-color);
+        cursor: pointer;
+        transition: fill .75s ease;
+    }
+}
+

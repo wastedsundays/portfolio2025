@@ -31,7 +31,7 @@ const AboutPage = () => {
     , [aboutRestPath]);
 
     return (
-    <motion.div
+    <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -59,7 +59,7 @@ const AboutPage = () => {
             </div>
 
             
-    </motion.div>
+    </motion.main>
     );
     };
 

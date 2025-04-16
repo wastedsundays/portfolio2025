@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm';
 
 const ContactPage = () => {
     return (
-        <motion.div
+        <motion.main
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -16,7 +16,7 @@ const ContactPage = () => {
 
                 <ContactForm />
             </section>
-        </motion.div>
+        </motion.main>
     );
     };
 

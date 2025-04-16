@@ -1,5 +1,31 @@
 footer {
     background-color: var(--primary-color);
     padding: .5rem 1rem;
-    color: #e0e0e0
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    // justify-content: space-between;
+
+    @media (min-width: 40rem) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.footer-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 40rem) {
+        margin-bottom: 0;
+    }
+    
+    svg {
+        width: 3rem;
+        fill: var(--button-text);
+        // margin: 0 0 0 1rem;
+    }
 }

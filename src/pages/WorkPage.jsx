@@ -32,7 +32,7 @@ const WorkPage = () => {
 
 
     return (
-        <motion.div
+        <motion.main
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -72,8 +72,8 @@ const WorkPage = () => {
             <Loading />
         }
         </section>
-        <Footer />
-        </motion.div>
+
+        </motion.main>
     );
     };
 
