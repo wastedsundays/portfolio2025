@@ -2,6 +2,7 @@ $theme-universal: (
     'primary-color': #0076B6,
     'primary-light': #33A6D9,
     'primary-dark': #005A88,
+    'text-on-primary': #e0e0e0,
     'secondary-color': #FF9800,
     'secondary-light': #FFB74D,
     'secondary-dark': #F57C00,
@@ -16,7 +17,8 @@ $theme-light: (
     'background-surface': #F5F9FC,
     'border-color': #e8e8e8,
     'nav-background': rgba(245, 249, 252, 0.85),
-    'input-background': #F5F9FC
+    'input-background': #F5F9FC,
+    'interaction-hover': #F5F9FC
 );
 
 $theme-dark: (
@@ -27,5 +29,6 @@ $theme-dark: (
     'background-surface': #1C1C1C,
     'border-color': rgba(250, 251, 253, .2),
     'nav-background': rgba(28, 28, 28, 0.85),
-    'input-background': rgba(200, 200, 200, .15)
+    'input-background': rgba(200, 200, 200, .15),
+    'interaction-hover': rgba(200, 200, 200, .1),
 );
