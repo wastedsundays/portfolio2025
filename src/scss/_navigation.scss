@@ -66,11 +66,13 @@ nav {
     z-index: 999;
 
     @media (min-width: 800px) {
-        background-color: var(--background-color);
+        // background-color: var(--background-color);
+        background-color: transparent;
+        backdrop-filter: blur(0);
         display: block;
     }
 }
-
+//linear-gradient(to left, red 0%, red 400px, transparent 600px)
 nav ul {
     list-style: none;
     font-family: 'Edo', sans-serif;
@@ -79,6 +81,7 @@ nav ul {
 
     @media (min-width: 50rem) {
         font-size: 2rem;
+        background: linear-gradient(to left, var(--background-color) 0%, var(--background-color) 400px, transparent 600px);
     }
 }
 
