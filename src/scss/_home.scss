@@ -46,5 +46,11 @@
 .home-page section:not(.hero-section) {
 
     padding-top: min(20vh, 10rem);
+    padding-bottom: min(10vh, 5rem);
 }
 
+.wp-api-content {
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    padding-bottom: min(10vh, 5rem);
+}
