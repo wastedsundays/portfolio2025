@@ -44,8 +44,14 @@ const HomePage = () => {
                 transition={{ duration: 1.5 }}
                 >
                 <section className='hero-section'>
-                    <h1>Adam H</h1>
-                    <p>Front End Developer & Maker of things</p>
+                    <div className='hero-image'>
+                        <img src="https://picsum.photos/2000/1000" alt="Hero" />
+                    </div>
+                    <div className='hero-image-overlay'>
+                        <h1>Adam H</h1>
+                        <p>Front End Developer & Maker of things</p>
+                    </div>
+
                 </section>
                 
                 <section className='featured-work'>
