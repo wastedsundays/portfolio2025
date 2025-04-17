@@ -42,3 +42,9 @@
 
     }
 }
+
+.home-page section:not(.hero-section) {
+
+    padding-top: min(20vh, 10rem);
+}
+
