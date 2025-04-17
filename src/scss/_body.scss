@@ -37,6 +37,15 @@ header {
 }
 
 
+#logo {
+    width: 4rem;
+    height: 5rem;
+    position: fixed;
+    z-index:9999;
+    fill: var(--primary-color);
+
+}
+
 
 .wp-data img {
     width: 100%;
