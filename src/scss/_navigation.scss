@@ -94,11 +94,11 @@ nav li a {
 }
 
 nav li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-light);
 }
 
 .active-menu-item a {
-    color: var(--primary-light);
+    color: var(--primary-color);
 }
 
 nav.closed {
