@@ -10,7 +10,7 @@ import SinglePage from './pages/SinglePage';
 import ContactPage from './pages/ContactPage';
 import ErrorPage from './pages/ErrorPage';
 import Navigation from './components/Navigation';
-import Logo from './components/Logo';
+import Logo from './assets/Logo';
 import ThemeToggle from './components/ThemeToggle';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
