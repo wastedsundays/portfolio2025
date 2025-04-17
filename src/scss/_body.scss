@@ -34,15 +34,30 @@ body {
 
 header {
     background-color: var(--background-color);
+    height: 0;
 }
 
 
 #logo {
     width: 4rem;
-    height: 5rem;
-    position: fixed;
+    height: 4rem;
+    position: relative;
     z-index:9999;
-    fill: var(--primary-color);
+    fill: var(--primary-text);
+    
+    circle {
+        fill: var(--nav-background);
+    }
+
+
+    @media (min-width: 50rem) {
+        width: 5rem;
+        height: 5rem;
+
+        circle {
+            fill: var(--background-color);
+        }
+    }
 
 }
 
