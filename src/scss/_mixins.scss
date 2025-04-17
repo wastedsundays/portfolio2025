@@ -3,6 +3,10 @@
       --#{$key}: #{$value};
     }
   }
+  @mixin image-adjustments {
+    filter: brightness(var(--image-brightness)) contrast(var(--image-contrast)) saturate(var(--image-saturate));
+    transition: filter .5s ease-in-out;
+  }
 
   @mixin depth-0 {
     border: 1px solid var(--border-color);

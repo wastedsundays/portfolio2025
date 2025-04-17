@@ -61,6 +61,10 @@ header {
 
 }
 
+img {
+    @include mixins.image-adjustments;
+}
+
 
 .wp-data img {
     width: 100%;
